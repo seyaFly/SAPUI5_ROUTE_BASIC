@@ -1,0 +1,22 @@
+<mvc:View
+	xmlns:form="sap.ui.layout.form"
+	controllerName="onem.seya.routenavigation.controller.nav.ProductDetail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+	<Page
+		showNavButton="true"
+		navButtonPress="navBack"
+	>
+		<content>
+			<form:SimpleForm>
+				<Label text="ProductId"/>
+				<Text id="idProductText"/>
+			</form:SimpleForm>
+		</content>
+	</Page>
+</mvc:View>

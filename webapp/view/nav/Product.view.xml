@@ -1,0 +1,20 @@
+<mvc:View
+	xmlns:form="sap.ui.layout.form"
+	controllerName="onem.seya.routenavigation.controller.nav.Product"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+	<Page
+		showNavButton="true"
+		navButtonPress="navBack"
+	>
+		<content>
+			<form:SimpleForm>
+				<Text text="Nav to Product without paramter"/>
+			</form:SimpleForm>
+		</content>
+	</Page>
+</mvc:View>

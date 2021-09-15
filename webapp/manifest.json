@@ -1,0 +1,128 @@
+{
+    "_version": "1.21.0",
+    "sap.app": {
+        "id": "onem.seya.routenavigation",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}"
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": false,
+        "rootView": {
+            "viewName": "onem.seya.routenavigation.view.Main",
+            "type": "XML",
+            "async": true,
+            "id": "idAppControl"
+        },
+        "dependencies": {
+            "minUI5Version": "1.60.0",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.layout": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "onem.seya.routenavigation.i18n.i18n"
+                }
+            }
+        },
+        "resources": {
+            "css": [{
+                "uri": "css/style.css"
+            }]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "onem.seya.routenavigation.view",
+                "controlId": "idAppControl",
+                "controlAggregation": "pages",
+                "bypassed": {
+                    "target": "notFound"
+                },
+                "async": true
+            },
+            "routes": [{
+                    "name": "Main",
+                    "pattern": "",
+                    "target": ["mainView"]
+                },
+                {
+                    "name": "product",
+                    "pattern": "product",
+                    "target": ["ProductTarget"]
+                },
+                {
+                    "name": "productDetail",
+                    "pattern": "product/{productId}",
+                    "target": ["ProductDetailTarget"]
+                },
+                {
+                    "name": "productDetailQuery",
+                    "pattern": "product/{productId}/resume:?query:",
+                    "target": ["ProductDetailQueryTarget"]
+                }
+            ],
+            "targets": {
+                "mainView": {
+                    "viewType": "XML",
+                    "viewLevel": 1,
+                    "viewName": "Main"
+                },
+                "notFound": {
+                    "viewType": "XML",
+                    "viewLevel": 2,
+                    "transition": "show",
+                    "viewName": "NotFound"
+                },
+                "ProductTarget": {
+                    "viewType": "XML",
+                    "viewLevel": 2,
+                    "transition": "fade",
+                    "viewName": "nav/Product"
+                },
+                "ProductDetailTarget": {
+                    "viewType": "XML",
+                    "viewLevel": 2,
+                    "transition": "flip",
+                    "viewName": "nav/ProductDetail"
+                },
+                "ProductDetailQueryTarget": {
+                    "viewType": "XML",
+                    "viewLevel": 2,
+                    "transition": "flip",
+                    "viewName": "nav/ProductQueryDetail"
+                }
+            }
+        }
+    }
+}

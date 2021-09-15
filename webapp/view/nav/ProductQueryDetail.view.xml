@@ -1,0 +1,22 @@
+<mvc:View
+	xmlns:form="sap.ui.layout.form"
+	controllerName="onem.seya.routenavigation.controller.nav.ProductQueryDetail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+	<Page
+		showNavButton="true"
+		navButtonPress="navBack"
+	>
+		<form:SimpleForm>
+			<Label text="ProductIdParamter"/>
+			<Text id="idProductQueryText"/>
+			<Label text="queryParamter"/>
+			<Text id="idQuery"/>
+		</form:SimpleForm>
+	</Page>
+</mvc:View>

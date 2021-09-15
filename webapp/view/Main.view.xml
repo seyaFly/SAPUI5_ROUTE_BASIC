@@ -1,0 +1,30 @@
+<mvc:View
+	xmlns:layout="sap.ui.layout"
+	controllerName="onem.seya.routenavigation.controller.Main"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+>
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<layout:VerticalLayout class="sapUiContentPadding">
+						<Link
+							text="Naviation to Product page without parameter"
+							press="navToProduct"
+						/>
+						<Link
+							text="Naviation to Product page with parameter"
+							press="navToProductWithParamter"
+						/>
+						<Link
+							text="Naviation to Product page with parameter and query"
+							press="navToProductWithParamterAndQuery"
+						/>
+					</layout:VerticalLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
